@@ -146,8 +146,8 @@
   </div>
 
   <!-- PLAY -->
-<!--  <div class="play-screen" id="pscr" onclick="startReel()"> -->
-    <div class="play-screen" id="pscr">
+  <div class="play-screen" id="pscr" onclick="startReel()">
+  
     <div class="pc"><div class="pt"></div></div>
       
     <div class="ph">PROMPTING IS THE EASY PART</div>
@@ -444,19 +444,19 @@ function tick(ts) {
   if (el < TOTAL) raf = requestAnimationFrame(tick);
 }
 
-// function startReel() {
-//  document.getElementById('pscr').style.display='none';
-//  startT=null; curScene=0;
-//  switchScene(0);
-//  raf = requestAnimationFrame(tick);}
-
- function startReel() {
-  document.getElementById('pscr').style.display = 'none';
-  startT = null;
-  curScene = 0;
+function startReel() {
+  document.getElementById('pscr').style.display='none';
+  startT=null; curScene=0;
   switchScene(0);
-  raf = requestAnimationFrame(tick);
-}
+  raf = requestAnimationFrame(tick);}
+
+// function startReel() {
+//  document.getElementById('pscr').style.display = 'none';
+//  startT = null;
+//  curScene = 0;
+//  switchScene(0);
+//  raf = requestAnimationFrame(tick);
+//}
 
 window.addEventListener('load', function () {
   startReel();
